@@ -17,3 +17,26 @@
 | `git branch branch_name`            | Створити нову гілку `branch_name`                                     |
 | `git branch -D branch_name`         | Видалити гілку `branch_name`                                          |
 | `git checkout hash-or-branch`       | Перейти на іншу гілку або хеш коміту                                  |
+
+### Управління гілками
+
+| Команда                          | Опис                                                                                     |
+|----------------------------------|------------------------------------------------------------------------------------------|
+| `git branch`                     | Показати всі гілки                                                                       |
+| `git branch new_branch`          | Створити нову гілку з назвою `new_branch`                                                |
+| `git branch -m new_name`         | Перейменувати поточну гілку на `new_name`                                                |
+| `git branch -d branch_name`      | Видалити неактивну гілку                                                                 |
+| `git checkout branch_name`       | Перейти з поточної гілки на гілку `branch_name`                                          |
+| `git switch branch_name`         | Перейти з поточної гілки на гілку `branch_name`                                          |
+| `git checkout -b new_branch`     | Створити гілку `new_branch` та одразу перейти на неї                                     |
+| `git switch -c new_branch`       | Створити гілку `new_branch` та одразу перейти на неї                                     |
+| `git merge branch_name`          | Об'єднати `branch_name` з поточною гілкою                                                |
+| `git revert hash_of_commit`      | Створити новий коміт зі змінами протилежними змінам у вибраному коміті                   |
+| `git reset hash_of_commit`       | Переставити гілку на вказаний коміт                                                      |
+| `git reset HEAD^^ --hard`        | Переставити активну гілку на 2 коміти назад та видалити всі зміни в файлах               |
+| `git rebase branch_name`         | Перебудувати зміни з поточної гілки під `branch_name`. Усі коміти поточної гілки будуть перебудовані під `branch_name` |
+| `git rebase -i branch_name`      | Перебудувати зміни з поточної гілки під `branch_name`. Лише вибрані коміти поточної гілки будуть перебудовані під `branch_name` |
+| `git restore file_name`          | Видалити непідготовлені зміни до коміту в `file_name`                                    |
+| `git restore --staged file_name` | Видалити підготовлені зміни до коміту в `file_name`                                      |
+| `git restore -SW`                | Видалити всі зміни у файлах (підготовлені та непідготовлені до коміту)                   |
+| `git commit --amend`             | Замінити поточний коміт на інший                                                         |
